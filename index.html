@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    
+    <style>
+     *{
+        margin:0px;
+        padding:0px;
+        font-family:calibri;
+        box-sizing:border-box;
+     }
+     body,html{
+        width:100%;
+        height:100%;
+        margin:auto;
+        text-align:center;
+     }
+     nav{
+        width:100%;
+        height:80px;
+        background-color:#FFFFFF;
+      
+     }
+     .logo{
+        font-size:30px;
+        color:white;
+        margin:0 100px;
+        line-height:80px;
+     }
+     .logo>img{
+        width:20%;
+        height:100%;
+     }
+     nav ul{
+        float:right;
+        list-style-type:none;
+        margin-right:20px;
+     }
+     nav ul li{
+        display:inline-block;
+        line-height:80px;
+        
+
+     }
+     nav ul li a{
+        text-decoration:none;
+        color:black;
+        font-size: 18px;
+        text-transform:Capitalize;
+        padding:8px 20px;
+        background:#FFFFFF;
+     } 
+     nav ul li a:hover{
+        background:red;
+     }
+     #checkbtn{
+        float:right;
+        line-height:80px;
+        margin-right:10px;
+        font-size:30px;
+        color:red;
+        display:none;
+     }
+     #check{
+        display:none;
+     }
+     #check:checked ~ ul{
+       left:0;
+     }
+     .btn{
+        padding:10px 15px;
+        font-size:20px;
+        background-color: #5151D5;
+        color:white;
+     }
+     .container{
+        background:#05063A;
+        height:auto;;
+        width:100%;
+        text-align:center;
+        color:white;
+        padding:30px 10px;
+        
+     }
+     .container>p{
+        font-size:100px;
+     }
+     .container>p:nth-child(2){
+        font-size:35px;
+     }
+     .container>p:nth-child(3){
+        font-size:35px;
+     }
+     .section{
+        text-align:center;
+        padding-top: 50px;
+        display:grid;
+        width:80%;
+        margin:auto;
+        gap:15px;
+        grid-template-columns: repeat(9,1fr);
+     }
+     .section>div{
+        border:1px solid white;
+        padding: 10px;
+     }
+     
+     .container button{
+        margin-top:30px;
+     }
+     #shree{
+        margin-top:20px;
+        font-size:20px;
+     }
+     .img1{
+        width:100%;
+     }
+     .p1{
+        font-size:35px;
+       
+     }
+     .sec1{
+        display:grid;
+        grid-template-columns:repeat(9,1fr);
+        gap:20px;
+        width:90%;
+        margin:auto;
+        margin-top:40px;
+     }
+     .sec1 img{
+        width:70%;
+
+     }
+     .sec2{
+        background:#F5F7FF;
+        width:100%;
+        margin:auto;
+        margin-top:30px;
+        padding:30px;
+     }
+     .sec2 p{
+        font-size:30px;
+     }
+     .sec3{
+        display:grid;
+        grid-template-columns:repeat(5,1fr);
+        gap:20px;
+        text-align:left;
+        font-size:10px;
+     }
+     .sec3>div>img{
+        width:100%;
+        
+     }
+     
+     
+        
+     @media(max-width:1422px)
+     {
+        .logo{
+            font-size: 28px;
+            margin:0 50px;
+        }
+        #checkbtn{
+            display:block;
+            margin-right: 50px;
+        } 
+        nav ul{
+            width:100%;
+            height:100vh;
+            background:#FFFFFF;
+            text-align:center;
+            position:fixed;
+            top:80px;
+            left:-100%;
+            transition:.5s;
+            font-size:30px;
+        }
+        nav ul li{
+            display:block;
+            text-align:left;
+            line-height:40px;
+            
+        }
+        .btn{
+            display:none;
+        }
+        .section{
+            grid-template-columns: repeat(3,1fr);
+            font-size:30px;
+        }
+        .sec1{
+            grid-template-columns:repeat(4,1fr);
+        }
+        
+        
+     }
+     @media(max-width:800px)
+     {
+        .section{
+            grid-template-columns: repeat(2,1fr);
+            font-size:30px;
+        }
+        .sec1{ grid-template-columns:repeat(3,1fr);
+        }
+        #p1{
+            font-size:30px;
+        }
+        .container>p:nth-child(2){
+        font-size:25px;
+     }
+     }
+     @media(max-width:500px)
+     {
+        #p1{
+            font-size:30px;
+        }
+        .section{
+            grid-template-columns: repeat(1,1fr);
+            font-size:30px;
+        }
+        .sec1{
+            grid-template-columns:repeat(3,1fr);
+        }
+        .container>p:nth-child(2){
+        font-size:20px;
+     }
+     }
+     
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check" name="" value="">
+        <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+       <label class="logo"><img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt=""></label>
+      <ul>
+        <li><a class="active" href="#">Products</a></li>
+        <li><a href="#">Use cases</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact sales</a></li>
+        <li><a href="#">Log in</a></li>
+        <li><button class="btn">Get Started -></button></li>
+       </ul>
+    </nav>
+    <div class="container">
+        <p id="p1">A platform built for<br>new way of working</p>
+        <p>What would you loke to manage with monday.com Work OS?</p>
+        <div class="section">
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAAzAD8DASIAAhEBAxEB/8QAGgABAQEBAQEBAAAAAAAAAAAAAAcFBgMEAf/EADYQAAEDAgMEBwYGAwAAAAAAAAEAAgMEBQYREhYxVpQHFSFBUWHSExQicYGRF0JSVFWTwdHh/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAMBBAUC/8QAJBEAAgIBAwQCAwAAAAAAAAAAAAECAxEEEiEFEzFRMkFxodH/2gAMAwEAAhEDEQA/AJptZiTiG7c7J6k2sxJxDdudk9Sx0AJ3Alam1ehZsbWYk4hu3OyepNrMScQ3bnZPUsjS79J+y97fRy3Cugo4MvaTyBjc9wzO8o2x9EpNvCNDazEnEN252T1JtZiTiG7c7J6lS6bo7sMdI2KeKWaXT8UxkIJPiAOwKZ4rspsF5lohIZI8g+NxHaWndn59y4jKEnhIs3aS2mKlLwfu1mJOIbtzsnqTazEnEN252T1LHRd7V6KoVs6OqeGHCdE+KNrXy6nSOA7XHURmfoAomrd0eyMfhCgDHBxaHtcAdx1nsKXd8TS6XjvP8fw6NRzGs3VGPH1dGxrXxujm05ZAuyBOfz7/AJqxqLdJT2vxdVaXA6WRg5eOkJdPyLvUnipP7yd/S9IFgmoxPNUOhky+KFzCXA+AyGRUwxZeuv71LWtjMceQZG07w0ePnvWjZ8D3G62R9yikjjzBMMTwc5QPPu8vFcsQWkgjIjsIKbCMU3gztTffOEVYsJ/sIiJpRC9oKqopwRT1EsQO/Q8tz+y8UUAnjwfX1ncP31V/c7/a+rDdplv16gowX6XnVM8b2sG8/wCPmQspbeFMRS4crpKiOBs7JWaHsccu/MEFQ844G1uLmu4+C5wQx08EcELQ2ONoa1o7gNykfSXYerbt7/AwCmrCXHL8snePrv8AutX8U3fxI/v/AOLDxZjSXEVFHSe5tp42Se0J16iSAQO4eKTXCcZZNTV6jT21bU+V44OUREVgxgiIgAiIgAiIgAiIgD//2Q==">
+                <p>Creative &<br>Design</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAAwAEADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAYCBQcBBAP/xAAxEAABAgQCCQMDBQEAAAAAAAABAgMABAUGEWESFiExQVFWlNIUcbEiI+ETMkJDYoH/xAAZAQADAQEBAAAAAAAAAAAAAAAAAwUBBAL/xAAmEQABAwMEAQQDAAAAAAAAAAABAAIDBBESBSExUUETFCJhgZGh/9oADAMBAAIRAxEAPwDM9a7k6hq/fu+UGtdydQ1jv3fKKiORUxb0lq41ruTqGr9+75Qa13J1DV+/d8osrXtj1qROVFJEuR9to7CvM5fMV92SslKVYtU/RCQnFxCdyVcvxCg+MvwAXIyuifOYG7kfpR1ruTqGr9+75Qa13J1DV+/d8o9VmSNPn5p9ueSlbgSC0hR378dnHhHLot1dLcMzKgrklH3LR5HLP/nuZx54Ebo99EKj27tj/CvNrXcnUNY793yg1ruTqGr9+75RTx2G4t6XWiGy1bZ9RoT1RR9re20f5ZnLKFI7RGiWnXGJ6VRJOYNzDScAnH945iE1LnhnxUzVpJ46e8X5PQXwum5RJhUlT1D1GGC3BubHIZwhkkkknEnaSeMMV128unOqnJYKXKLVirHaWyTxyzhdjYGsDLtXvTI4GQAw735Pm/2pNOLZcS40ooWg4pUN4MaFblfZrDBlJ0I9To4KSofS6OYHyIzuG6z7eW4tupzgUhCTpMI3FX+jly5+2/KlrCy7kvVo4HQZSGxHB836Xjui3FU1RmpMFUoo7Rxb/ELsPF415pDLlNlsHHFjB1Q3Iy94R42AvLLuTNMknkpwZufH2ERJtxbTiXGlKQtJxSpJwIMRghyoEXWiW3cDVXZMpOhAmdEhSSPpdTx/IhWuulS9KqCUSrgKHUlf6WO1vb8cvaKVKlIUFIUUqG4g4ERJ11x1em6tS1c1HEwlkOD8mnbpToKD0KgyRus08hMFl0uWqE467NDTDGBS2dyicd/tFxddyiWC5GnrxfOxx0f15DP4hHaedZVpMuLbVhhihREQJJJJOJO8mB0OUmTjt0iTTxNU+tKbgcBBJJJJJJ2knjBBBD1RX//Z">
+                <p>Software<br>development</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAApADkDASIAAhEBAxEB/8QAGgABAQEAAwEAAAAAAAAAAAAAAAUGAgQHA//EADUQAAEDAgQBCAgHAAAAAAAAAAECAwQABQYREiEWIjFBVmGBlNITUXGhscHR8BQVIzJCQ5H/xAAaAQABBQEAAAAAAAAAAAAAAAADAAECBAUG/8QAJBEAAQQBAwQDAQAAAAAAAAAAAQACAwQRBRIhE1HR4TEyQZH/2gAMAwEAAhEDEQA/APNOLMSdYbt41zzU4sxJ1hu3jXPNUelam0dkNWOLMSdYbt41zzV94eIcVzpCWI19vC1q6BNd27TvsK6Vms0m7PZNDQ0Dy3VDYfU1ummbbhyAVEhtP8lndTh+fsqDi0cALSpae6cdR52sH748rrzEYjjWlyRxReFSW0FakiY5pOXOBvnWT4sxJ1hu3jXPNW4s1yavMJbwb0p1qQpCt/vY15rOjmLMfYP9aynfsNMznIIRdTrQxtjkg+pVLizEnWG7eNc81OLMSdYbt41z61HpRNo7LISr+GcP/mpMiQrTGbVpIHOs8+XYKgVsMASsjKiKVz5OJHuPypnkgcK9p0ccllrZBkKzdLtCsEVLLSE+kCf02Ebd59QrA3K4yblIL0pwqOZ0p6ED1AVvZmGbdMlOSXg7rcOagF5CuIwvZkDlRie1TqvrQ2ua1bV2ncsnaCAwfAz6UXAEnKRKjE/uSFgew5H4iunjaKGLyXUjIPoCu8bH4CtbDt9nt7gcjIYbcG2ouZkf6agY6kQ30RQy8hx9BVnoIOST6+8D304OX5CFZrmLTunI4EtOR/fZWRpSlGXOJXNpxxlwONLUhaeZSTkR31wpSSBxyFasd6fj3Zl2ZKeWyeSvWsqyB6aoY3mQpQi/hnkuvJz1Fs5gJ25z99NZWlR2jOVcbdkEDoDyClKUqSppSlKSS//Z" alt="">
+                <p>Marketing</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAApADEDASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAUGBwQBA//EADQQAAECBAEICAYDAAAAAAAAAAEAAgMEBREGEhQWFzFVlNEHExUhVpKT0iJBUVOV4kWBkf/EABkBAAMBAQEAAAAAAAAAAAAAAAAEBQMBBv/EACoRAAIBAwMCAwkAAAAAAAAAAAECAAMEEQUSITFRFJHwE0FTVGGSobHh/9oADAMBAAIRAxEAPwDOZXEeK5yYhy8rXKxFjRDZrGzsS5PmU/mXSLvOqflD71UKNUo1IqUGegNa58In4XbCCLEf4Vc9Zr90t4j9Vy/fUEcC0pqy45z38xGLZbVlPtmIPr6GfPMukXedU/KH3rjqkXHlKls5natV2QQQC9tRe61/rZykNZr90t4j9VG4hxzGrFMiSLZFkBsUjLd1mWSAb2HcPmAlaFXWDVUVaKhc89On3H9TapTsQhKOc+71iROlmJPENW42J7k0sxJ4hq3GxPcodFf2jtJsmNLMSeIatxsTmih0RtHaELqpUkajUpaTDwzrogZlEbLrlXrXFrg5pIcDcEbQhwxUhTgzqkAjM0rVpJ7wmPI1NWslvCY8jVRtIKyP5We4h3NNIKzvWe9d3Nef8Bq/zA8v5KXiLL4X5lrreAJen0qZnIM9Ec+CwvyXsFjb5KhLtmavUpuEYU1UJqNDO1kSM5wP9FcSqWNG5pIRcVN5z2ilw9J2BpLgQiInovJjCkSmwq3AfWGtdK2N8tt2h1u64+i0rtPCX3aZ6beSx1FIv9JS8qB2dhgY4PEdt700F2hQZsXaeEvu0z028lXscTmG49HLafmj5zLb1ZgMAIF++5A2WWfIsLfQadCqtQVWODnrNKuotUQrsHMIiK9J0IiIhP/Z" alt="">
+                <p>Project<br>Management</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAApAEADASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAMFAQYHBP/EACwQAAAFAgMGBgMAAAAAAAAAAAABAgMFBBESFiEGQVVhlNETFCIxMlEVgaH/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQQFAgP/xAAjEQACAAYBBAMAAAAAAAAAAAAAAQIDBBESIVEFEzGBQXHh/9oADAMBAAIRAxEAPwDmKtoJvyzZ/mZK/iLK/m3PpHPmYjzBN8akusc7jxOmgkIbbUaiSalGoytcztu/RCIamK4PMsswTfGpLrHO4Zgm+NSXWOdxWgGK4BZZgm+NSXWOdwzBN8akusc7itAMVwCyzBN8akusc7hmCb41JdY53FaAYrgABkB0DAmpaZ+sfSxStKddX8UJLUxPERr8rXt0dMXqXqpRlohO8zGyO7KTMPWIqoSpJ7XCS02JSb6HcjuRkJSKlRWSpUXbcSUTWr+PZ5kbDynknah5bTbiEYksEeJSuRmWhf0auWpDp8htEzA1lFH1Ti3zwGqqe+SiMy0O3M924hzetUyusfXSpUlhTijbJXuSb6A0kVemVFTOyinLT3C7attfpAAyAg1QAAANmhJuhhYCoVS4lS76jT6knZCdx39rF72+xVRk3IxbprpKpZYjutC/UlR/Zke/mK4AuVoaOSnG4lfJ7vv19L4Jqyqerap2pqV43XVYlGIQACwkoVZeAAABJ//Z" alt="">
+                <p>Sales & CRM</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAAsADkDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAYHAQQFAgP/xAAtEAABAwMCBQMCBwAAAAAAAAABAAIDBAURBiEHEjFBURVhoXGREzM0YnKBsv/EABgBAQADAQAAAAAAAAAAAAAAAAABAgMF/8QAGREBAQEBAQEAAAAAAAAAAAAAAAECETET/9oADAMBAAIRAxEAPwCnERF1mYiKyuG2h2VjG3e9QB0B/TwSDZ/7nDx4HfqiNamZ2q1RSziZT2ql1K6G0Mjja2Jv47Itmtk32AHTbGVE0JezoiIiXUi05eJbU66x2+Z1E0ZMox0846ke+MLlq4OGWr6WrooLHWcsNVC3khOdpmjt/L27r1euGVHW3yKro5RTUb3c1TA0f48Z+PhOM/py80inDnRrr5UtuNwZi3Qu2aR+e4dvoO/2+k24h6wZp+k9Ptzm+oStwOXGIG+SPPgf2t3VeoaHRtljhpIoxOW8lLTtGwx3PsPk/dUXV1U9bVS1NVI6SaVxc97upKnxWS7vb4+T3Oe9z3uLnOOSScklYRFDYREQZY5zHh7HFrmnIIOCCrLsPFM01rMN3ppairjbiOWPAEm23N4PuMqs0RXWZr1vXq61d6uMtdXSc8sh6Do0dgPAC0URFhERAREQf//Z" alt="">
+                <p>Task<br>management</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAA2AD8DASIAAhEBAxEB/8QAGQABAQEBAQEAAAAAAAAAAAAAAAcFBgQD/8QANRAAAAMFBAULBQEAAAAAAAAAAAECAwQFBhESExYxITZWlNIUFTJEUXFzdIOxwQciQXKBof/EABkBAAMBAQEAAAAAAAAAAAAAAAACBAUDAf/EACMRAAEEAgEEAwEAAAAAAAAAAAEAAgMRBBIFFCEiQRMxUcH/2gAMAwEAAhEDEQA/AJpiyZNoYtvrTiDFkybQxbfWnEMcemFm7piTqb6VXYmyb39a6RpkAC6SNFkBe/Fcy7QRbfWnEGLJk2hi2+tOIdzO7WEnLaiJTua1Ek3a7Mq5lpKn4oJcWenIcoJBK3bWlTl4/Tv02tbGK5lpXEEW31pxBiyZNoYtvrTiFDU2gOFqmbtyK5pQqVtUy7bX+iSDyCUS341S9ysbp9fK7C2MWTJtDFt9acQYsmTaGLb604hjgO+o/FIg+zk7NH17YurGl42WSE1yqZ0HxGpK2sUO8wj3A800kJ42hzw0+yt2YJI5qhSn1i9m2UyIjapUimjKpaRxxFU6ELJOWrEQ8MvchHEdNPeJcKV8kZLj7V/J48cMoEYoELtj+n7TmjlBPlXu7t3dn7cq2a/I4gXbqHpfAhJ5hcKZ8u2xT8njRwafGKtAABcspBqStrFDvMI9xlj2Qh7S4xV0e1kakMWqVqIs6EekJICWEBdIiGyNJ/QqxOWrEQ8MvchHEdNPeKRNk0wp6gDd3c3i+bPCSSSSSZWdJGdakJuR0Mj7BJgMc2M7Cu60eWkY+ZpYb7K69Q9L4EJPMVQ5zg5Qe8JuZtrqlxZO1apl2f0SsJgRuZtsKT8tLHJpob+/4gAA0VjoAABCAAAQgAAEIAABC//Z" alt="">
+                <p>HR</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAArAD8DASIAAhEBAxEB/8QAGwABAAMBAAMAAAAAAAAAAAAAAAUGBwECAwT/xAAvEAABAwMCBAQEBwAAAAAAAAABAAIDBAURBiEWMVaUEhMi0hRBUZEVI2FicYHx/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAHhEAAwACAwADAAAAAAAAAAAAAAECAxESIVEEMkH/2gAMAwEAAhEDEQA/AM04s1J1Ddu9k9ycWak6hu3eye5Q66GuIJDSQOZA5L1OK8MyX4s1J1Ddu9k9y99FqDVldUNp6S+3eSV2cNFdIM43+blAK/6QpbTDQvudIJpqqKI+a07lpxkho/XGylSvDPLk4TsrT9Uanje5j79eGuYcOBrZdj9148Wak6hu3eye5XF881+0zVS2+jbT1E5LHNdj1gHffG+yzd7XMeWPBDmnBB+RRyvCMeR3vfTRL8Wak6hu3eye5OLNSdQ3bvZPcodFHFeGp1jXPcGsaXOPIAZJWjaGt09NaqhldTFgmkyGSN3c3GNwqDbq2W31sVXAGmSM5AcMgrT7Pcfx+zSSeB0Dnh0Rwc4OOY+6ujl+U646/DtttFqohNLQQRvLifEfF48ftGeSotq1FU2Kjko4qNgmMpe98ucjYDGP6Vu05Yjp6OrnqKrzGubkhrSAA3Jz/KqWq79T3p0Qp6Ux+WT+a/HicPpt8kZniXKmvsvT6tR6qdX09I23Sz07gCZw1xbvtgZHMc1VSSTknJKIoOuImFpBERC4U1QalrqC1GgpRGz1EiXHqGef+qFRCtSq6ZYqPV1bDb56Opb8SJGOa2R7sObkY3+qrqIgmJnekERELBERAf/Z" alt="">
+                <p>Operations</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAApACoDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAABQYAAwQBAv/EADgQAAECBAMEBQkJAAAAAAAAAAECAwAEBREGEiETFBUxFjJRVdIiNVZhdJKUlbImNkFUcoKhorP/xAAaAQACAwEBAAAAAAAAAAAAAAABAgADBAUG/8QAIBEAAgMAAQQDAAAAAAAAAAAAAQIAAxESBCFRcTEyQf/aAAwDAQACEQMRAD8AT0qx2pIVxmqC4vY1Fdx/aO/bvvqp/Ml+KLcT1KpStUlZWnPZC8kAJypN1FVhqRHN3xb+dY91Hhj0h6ajkVCk56lOmV3x331U/mS/FAZ3FGJ2XVtO1+rpWglKkmdc0I/dDRSmcQInUGpTLS5axzJSE3vbTkBAyv4bn5+rPzTGy2a8tsy7HRIHZ6oWzo14cq1O+DIG8wP0sxJ6Q1b41zxROlmJPSGrfGueKBTzS2HnGXRlcbUUqF72INjHiMXEeI0c8S/emkfqb/0irF9UnpKqIalZlbSCyFZU9tzBuo0biFUk58TIQJcpOTJfNZV+d4W8arDdeZWpIWEtIJSrkfKOkdS8Miu3xpEQTHxWubnvm9u7DabLPmHWte1ufKCeEqrPTlW2U1Mrcb2ajlV26R44zKcBC+Hyd96tu34dXr2/iKMFqC6+pQSEgtrISOQ1GkUoSLUAfdh/IJrPnie9oc+oxjjZWfPE97Q59RjHGR/sYwm6kzC26nJFbyktpfRe6tAMwhsrtIlKvOpmeKss2bCMtgrkTrfMO2EWJFtdwVSrDRARGnopKd9s+4PFBCh0aUpM9vPFWXfIKctgnn68xhGiQy3VqdCd/ZkwzXVlJXVZ1aCFJU+sgg6EZjGSJEjOTp2Gf//Z" alt="">
+                <p>Operations</p>
+            </div>
+        </div>
+        <button class="btn">Get Started--></button>
+        <p id="shree">No credit card needed  Unlimited time on free plan</p>
+        <img class="img1" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/first_fold/image.png" alt="">
+    </div>
+    <p class="p1">Trusted by 152,000+ customers worldwide</p>
+    <div class="sec1">
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/hulu.png"></div>
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/bd.png" alt=""></div>
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/canva.png" alt=""></div>
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/nhl.png" alt=""></div>
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/coca_cola.png" alt=""></div>
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/hubspot.png" alt=""></div>
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/Electronic_Arts.png" alt=""></div>
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/nautica.png" alt=""></div>
+        <div><img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/universal.png" alt=""></div>
+    </div>
+    <div class="sec2">
+        <img  src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/products/monday_products_small.svg" alt="">
+        <p><h1>End-to-end products</h1>to run the core of your business</p>
+        <p>Tailored products designed for every aspect of your teams' needs.</p>
+        <div class="sec3">
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/products/wm_main_logo.png" alt="">
+                <p>For professionals and teams managing tasks & workflows</p>
+                <p>Manage tasks and workflows to fuel team collaboration and productivity at scale.</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
