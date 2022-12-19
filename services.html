@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+     *{
+        margin:0px;
+        padding:0px;
+        font-family:calibri;
+        box-sizing:border-box;
+     }
+    body,html{
+        width:100%;
+        height:100%;
+        margin:auto;
+        /* text-align:center; */
+     }
+        .top{
+            height:100px;
+            background: #F7F7F7;
+            margin:0 100px;
+            line-height:80px;
+            display:flex;
+            justify-content: space-between;
+        }
+    .top>img{
+            width:20%;
+            height:100%;
+        }
+        table{
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 80%;
+      margin: auto;
+      margin-top: 50px;
+      text-align: center;
+   }
+
+table td,
+table th {
+  border: 2px solid black;
+  padding: 8px;
+  text-align: center;
+}
+#checkout{
+  height:50%;
+  padding:10px 15px;
+  font-size: 25px;
+  justify-content: center;
+  margin: 20px;
+}
+
+table tr:nth-child(even) {
+  background-color: #0e6bdd;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0468aa;
+  color: white;
+  text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt="">
+        <button id="checkout">Checkout</button>
+    </div>
+    <h1>Total Price of services is <span id="total"></span>Rs.</h1>
+    <table>
+        <thead>
+             <tr>
+               <th>Name</th>
+               <th>Type</th>
+               <th>Current Role</th>
+               <th>Team Size</th>
+               <th>Comapny Size</th>
+               <th>Manage Work</th>
+               <th>price</th>
+               
+             </tr>
+           </thead>
+           <tbody>
+          
+           </tbody>
+         </table>
+</body>
+<script>let favo1=JSON.parse(localStorage.getItem("favo"))
+
+    display(favo1)
+function display(data)
+    {   document.querySelector("tbody").innerHTML=""
+        data.forEach((elem,index)=>{
+            let tr= document.createElement("tr");
+
+            let td1=document.createElement("td");
+            td1.innerText=elem.name;
+
+            let td2=document.createElement("td");
+            td2.innerText=elem.type;
+
+            let td3=document.createElement("td");
+            td3.innerText=elem.current_role;
+
+            let td4=document.createElement("td");
+            td4.innerText=elem.team;
+
+            let td5=document.createElement("td");
+            td5.innerText=elem.size;
+
+            let td6=document.createElement("td");
+            td6.innerText=elem.manage;
+
+            let td7=document.createElement("td");
+            td7.innerText=elem.price;
+
+            
+
+            tr.append(td1,td2,td3,td4,td5,td6,td7);
+
+            document.querySelector("tbody").append(tr);
+        })
+        let sum=0;
+        data.forEach((elem)=>{
+            sum+=(+(elem.price))
+        })
+        document.querySelector("#total").innerText=sum;
+    }
+
+    
+    document.querySelector("#checkout").innerHTML="<a href=checkout.html>Checkout</a>"
+</script>
+</html>
