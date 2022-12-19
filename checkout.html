@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        *{
+        margin:0px;
+        padding:0px;
+        font-family:calibri;
+        
+        }
+        body,html{
+        width:100%;
+        height:100%;
+        
+        }
+        .top{
+            height:100px;
+            background: #F7F7F7;
+            margin:0 100px;
+            line-height:80px;
+            display: flex;
+            justify-content: space-between;
+            padding:0px 30px;
+            font-size:25px;
+        }
+    .top>img{
+            width:20%;
+            height:100%;
+        }
+        #name{
+            font-size: 25px;
+            margin-right: 50px;;
+        }
+        .container{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+            width:30%;
+            margin:auto;
+            margin-top: 50px;
+            height:auto;
+            text-align: center;
+            height:500px;
+            padding:5px;
+            font-size: 25px;
+        }
+        #select1{
+            width:50%;
+
+        }
+        #form2{
+            display:none;
+        }
+        #form3{
+            display:none;
+        }
+        #form4{
+            display:none;
+        }
+        #btn{
+            display:none;
+        }
+        #form2>input{
+            width:50%;
+           
+        }
+       #form3>input{
+        width:50%;
+       }
+       #form4>input{
+        width:50%;
+       }
+       #select2{
+        width:50%;
+       }
+       #btn{
+        margin:auto;
+        padding:5px 30px;
+        margin-top: 25px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        background: #5151D5
+        
+
+       }
+       @media(max-width:657px){
+       /* #name{
+        display:none;
+       }
+       #group{
+        display:none;
+       } */
+       .top{
+        display:block;
+        line-height: 35px;
+        text-align: center;
+       }
+       .container{
+        margin-top: 80px;
+       }
+      
+        
+       }
+       @media(max-width:832px){
+        /* #name{
+        display:none;
+       }
+       #group{
+        display:none;
+       } */
+       .top{
+        display:block;
+        line-height:35px;
+        text-align: center;
+       }
+       .container{
+        margin-top: 80px;
+       }
+       }
+
+        
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt="">
+        <h3 id="name">Name:<span ></span></h3>
+        <p id="group">Group Name:<span></span></p>
+    </div>
+    <div class="container">
+        <h3>Total payment is <span id="total"></span>.</h3>
+        <div>
+            <form id="form1">
+              <p>Please select payment option.</p>
+              <select id="select1" onchange="shree()" required>
+                <option value="">select</option>
+                <option value="Debit">Debit Card</option>
+                <option value="UPI">UPI</option>
+                <option value="Net">Net Banking</option>
+              </select>
+            </form>
+
+            <form id="form2">
+                <p>Enter Card Number</p>
+                <input type="Number" required>
+                <br>
+                <p>Enter Date</p>
+                <input type="date" required>
+                <p>Enter CVV</p>
+                <input type="Number" required>
+                <p>Enter Card Holder Name</p>
+                <input type="text" required>
+                <br>
+            </form>
+
+            <form id="form3">
+              <p>Enter your UPI ID</p>
+              <input type="text">
+            </form>
+
+            <form id="form4">
+                <p>Select Bank</p>
+                <select  id="select2">
+                    <option value="">Select</option>
+                  <option value="">Bank Of Maharashtra</option>
+                  <option value="">Axis Bank</option>
+                  <option value="">SBI Bank</option>
+                  <option value="">HDFC Bank</option>
+                  <option value="">Canara Bank</option>
+                </select>
+                <p>Enter User Id</p>
+                <input type="text">
+                <p>Enter password</p>
+                <input type="password">
+            </form>
+
+            <button id="btn">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+    let favo1=JSON.parse(localStorage.getItem("favo"));
+    let data=JSON.parse(localStorage.getItem("customer"));
+    document.querySelector("#name>span").innerText=data[data.length-1].name;
+    document.querySelector("#group>span").innerText=data[data.length-1].Ac_Name;
+    let sum=0;
+        favo1.forEach((elem)=>{
+            sum+=(+(elem.price))
+        });
+        document.querySelector("#total").innerText=sum;
+        
+
+    
+    let form2=document.querySelector("#form2");
+    let form3=document.querySelector("#form3");
+    let form4=document.querySelector("#form4");
+    let btn=document.querySelector("#btn")
+
+    function shree(){
+        let form1=document.querySelector("#form1").select1.value;
+        
+        if(form1!="")
+        {
+            if(form1=="Debit")
+            {
+                form2.style.display="block";
+                btn.style.display="block";
+            }
+           else if(form1=="UPI")
+            {
+                form3.style.display="block";
+                btn.style.display="block";
+            }
+            else if(form1=="Net")
+            {
+                form4.style.display="block";
+                btn.style.display="block";
+            }
+        }
+    }
+
+    btn.addEventListener("click",function(){
+        alert("Thank You For Using Monday Services")
+    })
+
+    
+</script>
+</html>

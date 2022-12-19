@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body,html{
+        width:100%;
+        height:100%;
+        margin:auto;
+        
+     }
+     .top{
+            height:100px;
+            background: #F7F7F7;
+            margin:0 100px;
+            line-height:80px;
+        }
+    .top>img{
+            width:20%;
+            height:100%;
+        }
+        .container{
+            width:50%;
+            margin:auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-top:50px;
+            gap:0px;
+            padding:0px;
+            height:auto;
+            /* display:none; */
+        }
+        .container>div:nth-child(1){
+            width:85%;
+            padding:30px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            font-size:20px;
+            line-height:40px;
+            height:100%;
+        }
+        .container>div:nth-child(2){
+            width:60%;
+            background:#404094;
+            height:100px;
+            padding:30px;
+            margin:0px;
+            height:100%;
+            color:white;
+            padding-top:50px 30px;;
+            font-size:20px;
+        }
+        input{
+            width:90%;
+            height:30px;
+        }
+        #form1>input:nth-child(7){
+            background-color: #0060B9;
+            color:white;
+            padding:5px 10px;
+            font-size:20px;
+            margin-top: 20px;
+            height:50px;
+        }
+        .container1{
+            width:60%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            gap:30px;
+            margin-top:30px;
+            display:none;
+        }
+        h1{
+            text-align: center;
+            margin:30px;
+        }
+        .container1>div{
+            padding:20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            height:500px;
+            text-align:center;
+            font-size:25px;
+            line-height: 40px;
+        }
+        .container1>div>img{
+            width:40%;
+            height:20%;
+            text-align:left;
+        }
+        #select1{
+            width:50%;
+            margin:auto;
+            margin-top: 40px;
+        }
+        #select2{
+            width:50%;
+        }
+        #select3{
+            width:50%;
+        }
+        #select4{
+            width:50%;
+        }
+        #submit{
+            width:50%;
+        }
+        #info{
+            float:right;
+            line-height:100%;
+            padding:10px 15px;
+            margin: 35px;
+            background:#0060B9;
+            color:white;
+            font-size:20px;
+        }
+        #info a{
+            color:white;
+        }
+        #name3{
+            width:50%;
+            margin: auto;
+            text-align: center;
+            line-height: 50px;
+        }
+        #pop{
+            display:none;
+        }
+        
+        @media(max-width:800px){
+            .container>div:nth-child(2){
+                display:none;
+            }
+            .container1{
+                grid-template-columns:repeat(1,1fr)
+            }
+        }
+        @media(max-width:500px){
+            .container>div:nth-child(2){
+                display:none;
+            }
+            .container>div:nth-child(1){
+                width:100%;
+            }
+            .container1{
+                grid-template-columns:repeat(1,1fr)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt="">
+        <button id="info"> <a href="details.html">Info.section</a> </button>
+    </div>
+    <div class="container">
+       
+        <div>
+            <h3>Set Up Your Account</h3>
+            <p>Fill in your profile details</p>
+            <form id="form">
+                <p>Full Name</p>
+                <input type="text" placeholder="Enter Name" id="name" required>
+                
+                <p>Account Name</p>
+                <input type="text" id="Ac_Name" placeholder="Account Name" required>
+                <input type="submit">
+            </form>
+        </div>
+        <div>
+            <p>"Now that we have monday.com Work OS as the backbone of our organization I feel have an overview can trust."</p>
+            <hr>
+            <p>Charlie MacGregoer</p>
+            <p>Founder & CEO</p>
+            <p>The Sunday Hotel </p>
+        </div>
+    </div>
+    <div id="pop">
+        <h1>Welcome to Sunday.com</h1>
+    <div id="name3">
+    <h3>Enter  Name:-</h3>
+    <input type="text" id="name1" placeholder="Enter full name">
+    
+    </div>
+    
+    
+    <div class="container1">
+        
+        <div>
+        <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt="">
+        <p>Hey, what <b>brings you</b> here today.</p>
+        <form id="form1">
+           <select id="select1">
+            <option value="">Select</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="School">School</option>
+            <option value="Nonprofits">Nonprofits</option>
+           </select>
+           <br>
+           
+        </form>
+        </div>
+        <div>
+        <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt="">
+        <p>What best describes your <b>current role</b>?</p>
+        <form id="form2">
+            <select  id="select2">
+                <option value="">Select</option>
+                <option value="Business Owner">Business Owner-Work</option>
+                <option value="Team Leader">Team Leader-Work</option>
+                <option value="Team Member">Team Member-Work</option>
+                <option value="Freelancer">Freelancer-Work</option>
+                <option value="Director">Director-Work</option>
+                <option value="C-Level">C-Level-Work</option>
+                <option value="VP">VP-Work</option>
+                <option value="Personal">Personal-Personal</option>
+                <option value="Undergraduate Student">Undergraduate Student-School</option>
+                <option value="Graduate Student">Graduate Student-School</option>
+                <option value="Faculty Member">Faculty Member-School</option>
+                <option value="Other">Other-School</option>
+                <option value="Board member">Board member-Nonprofits</option>
+                <option value="Executive">Executive-Nonprofits</option>
+                <option value="Employee">Employee-Nonprofits</option>
+                <option value="Volunteer">Volunteer-Nonprofits</option>
+                <option value="IT staff">IT staff-Nonprofits</option>
+                <option value="Other">Other-Nonprofits</option>
+            </select>
+        </form>
+        </div>
+        <div>
+        <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt="">
+        <p>How many people are on your <b>team</b>?</p>
+        <form id="form3">
+            <select id="select3">
+                <option value="">Select</option>
+                <option value="Only Me">Only Me</option>
+                <option value="2-5">2-5</option>
+                <option value="6-10">6-10</option>
+                <option value="11-15">11-15</option>
+                <option value="16-25">16-25</option>
+                <option value="25-50">25-50</option>
+                <option value="51-100">51-100</option>
+                <option value="101-500">101-500</option>
+            </select>
+        </form>
+        </div>
+        <div>
+        <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt=""> 
+        <p>How many people work at your <b>company</b>?</p>
+        <form id="form4">
+            <select id="select4">
+                <option value="">Select</option>
+                <option value="1-19">1-19</option>
+                <option value="20-49">20-49</option>
+                <option value="50-99">50-99</option>
+                <option value="100-250">100-250</option>
+                <option value="251-500">251-500</option>
+                <option value="501-1500">501-1500</option>
+                <option value="1500+">1500+</option>
+            </select>
+        </form>
+        
+        </div>
+        <div>
+        <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt="">
+        <p>Select what you'd like to manage <b>First</b>?</p>
+        <form id="form5">
+            <select id="select5">
+                <option value="">Select</option>
+                <option value="Sales & CRM">Sales & CRM-Work&Personal</option>
+                <option value="HR & Recruiting">HR & Recruiting-Work&Personal</option>
+                <option value="Construction">Construction-Work&Personal</option>
+                <option value="Education">Education-Work&Personal</option>
+                <option value="Nonprofits">Nonprofits-Work&Personal</option>
+                <option value="Operations">Operations-Work&Personal</option>
+                <option value="Softeare Development">Softeare Development-Work&Personal</option>
+                <option value="Legal">Legal-Work&Personal</option>
+                <option value="Product Management">Product Management-Work&Personal</option>
+                <option value="Finance">Finance-Work&Personal</option>
+                <option value="Marketing">Marketing-Work&Personal</option>
+                <option value="PMO">PMO-Work&Personal</option>
+                <option value="Design Creative">Design Creative-Work&Personal</option>
+                <option value="IT">IT-Work&Personal</option>
+                <option value="Other things">Other things-Work&Personal</option>
+                <option value="Event Management">Event Management-Schools</option>
+                <option value="Industrial Work">Industrial Work-Schools</option>
+                <option value="Administrative Work">Administrative Work-Schools</option>
+                <option value="Curriculum and Syllabus Management ">Curriculum and Syllabus Management-Schools</option>
+                <option value="Academic Research">Academic Research-Schools</op-Schoolstion>
+                <option value="Group Assignments">Group Assignments-Schools</option>
+                <option value="Student organization">Student organization-Schools</option>
+                <option value="Project Management">Project Management-Schools</option>
+                <option value="Other Things">Other Things-Schools</option>
+                <option value="Volunteers Registration Managementt">Volunteers Registration Management-Nonprofits</option>
+                <option value="Fundraising Management">Fundraising Management-Nonprofits</option>
+                <option value="Event Management">Event Management-Nonprofits</option>
+                <option value="Grants Management">Grants Management-Nonprofits</option>
+                <option value="Project Management">Project Management-Nonprofits</option>
+                <option value="Other Things">Other Things-Nonprofits</option>
+            </select>
+        </form>
+        </div>
+        <div>
+            <img src="https://drive.google.com/uc?id=1lhNCd-4ogVNAHPEefwB_i0KAFHoDVRHg" alt=""> 
+            <p>Select best <b>plans</b> for you.</p>
+            <form id="form6">
+                <select id="select6">
+                    <option value="">Select</option>
+                    <option value="3000">Monthly Plan-3000Rs</option>
+                    <option value="8000">Quartrly Plan-8000Rs</option>
+                    <option value="16000">Half-yearly Plan-15000</option>
+                    <option value="25000">Yearly Plan-25000</option>
+                </select>
+                <br>
+                <p>Before click on submit please insure all <b>fiedls</b> are <b>filed</b>.</p>
+                <input type="submit" id="submit">
+            </form>
+           
+        </div>
+    </div>
+    
+</body>
+<script>
+    
+     
+    let data=JSON.parse(localStorage.getItem("customer"))||[];
+    let info=JSON.parse(localStorage.getItem("information"))||[];
+
+    let form=document.querySelector("#form");
+    let container=document.querySelector(".container");
+    let container1=document.querySelector(".container1");
+    let pop=document.querySelector("#pop");
+    
+   
+    form.addEventListener("submit",function(e){
+        e.preventDefault();
+        let obj={
+        name:form.name.value,
+        Ac_Name:form.Ac_Name.value
+    }
+       
+        data.push(obj)
+        localStorage.setItem("customer",JSON.stringify(data))
+        container.style.display="none";
+        pop.style.display="block";
+        container1.style.display="grid";
+
+       
+    })
+    let form1 = document.querySelector("#form1");
+    let form2 = document.querySelector("#form2");
+    let form3 = document.querySelector("#form3");
+    let form4 = document.querySelector("#form4"); 
+    let form5 = document.querySelector("#form5"); 
+    let form6 = document.querySelector("#form6");
+    let name  = document.querySelector("#name1");
+    form6.addEventListener("submit",function(e){
+        e.preventDefault();
+        let obj={
+            name:name.value,
+            type:form1.select1.value,
+            current_role:form2.select2.value,
+            team:form3.select3.value,
+            size:form4.select4.value,
+            manage:form5.select5.value,
+            price:form6.select6.value
+        }
+        info.push(obj);
+        localStorage.setItem("information",JSON.stringify(info));
+
+        
+    })
+   
+   
+   
+    
+</script>
+</html>
